@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply min-h-screen bg-appbg text-slate-100 antialiased;
+  background-image: radial-gradient(circle at top, rgba(34, 211, 238, 0.08), transparent 38%);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.light body {
+  @apply bg-slate-100 text-slate-900;
+  background-image: radial-gradient(circle at top, rgba(8, 145, 178, 0.12), transparent 42%);
+}
+
+.fade-up-enter-active,
+.fade-up-leave-active {
+  transition: all 0.35s ease;
+}
+
+.fade-up-enter-from,
+.fade-up-leave-to {
+  opacity: 0;
+  transform: translateY(12px);
+}
